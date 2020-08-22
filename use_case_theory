@@ -1,0 +1,34 @@
+import pyttsx3
+import os
+
+x=['notepad','microsoft edge','music','text editor','media']
+
+pyttsx3.speak("Hello")
+print("PRESS yes to view your options")
+p=input()
+
+if("yes" in p or "YES" in p or "Yes" in p):
+ print(x)
+ while (True):
+  print("Which application do you want to run?")
+  inp=input()
+  inp=inp.lower()
+  if("notepad" in inp and ("run" in inp or "open" in inp) ):
+    os.system("notepad")
+  elif("microsoft edge" in inp and ("run" in inp or "open" in inp)):
+    os.system("microsoft edge")
+  elif("music" in inp and ("run" in inp or "open" in inp)):
+    os.system("Youtube music")
+  elif("text editor" in inp and ("run" in inp or "open" in inp)):
+    os.system("atom")
+  elif("media" in inp and ("run" in inp or "open" in inp)):
+    os.system("VLC media player")
+  elif("exit" in inp or "quit" in inp):
+    pyttsx3.speak("Thank you!Have a good day")
+    break
+  else:
+    print("Don't support")
+ 
+else:
+ print("Did not understand.")
+
